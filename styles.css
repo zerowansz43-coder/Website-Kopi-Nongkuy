@@ -1,0 +1,457 @@
+:root {
+  --primary1: gold;
+  --primary2: rgb(218, 29, 29);
+  --primary3: brown;
+
+  --bg: white;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--bg);
+  color: var(--primary3);
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: var(--primary1);
+  border-bottom: 5px solid var(--primary3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .gambar-logo {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  left: -0.1%;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-family: "Great Vibes", sans-serif;
+  font-weight: 700;
+  color: var(--primary3);
+}
+
+.navbar .navbar-logo span {
+  color: white;
+  font-family: "Great Vibes", sans-serif;
+  margin-left: 10px;
+}
+
+.navbar .navbar-nav a {
+  color: var(--bg);
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary3);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.2rem solid var(--primary3);
+  transform: scaleX(0);
+  transition: 0.3s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar .navbar-extra a {
+  color: var(--bg);
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary3);
+}
+#hamburger-menu {
+  display: none;
+}
+/* Hero Section Start*/
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("mike-kenneally-TD4DBagg2wE-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 166, 1, 0.568) 8%,
+    rgba(255, 255, 255, 0) 25%
+  );
+}
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 5em;
+  color: var(--bg);
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.hero .content h1 .span1 {
+  font-size: 1em;
+  color: var(--primary2);
+  font-family: "Bebas Neue", sans-serif;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+.hero .content .span2 {
+  color: var(--primary1);
+  font-family: "Bebas Neue", sans-serif;
+}
+.hero .content p {
+  color: var(--bg);
+  font-size: 1em;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  line-height: 1.3;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
+  color: var(--bg);
+  background-color: var(--primary3);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+/* Hero Section end*/
+.about {
+  padding: 8rem 7% 1.4rem;
+}
+.about h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-family: "Bebas Neue", sans-serif;
+  color: var(--primary2);
+}
+.about-img img {
+  text-align: center;
+  width: 500px;
+  height: 500px;
+}
+.about .row {
+  display: flex;
+}
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+.about .row .about-img img {
+  width: 100%;
+}
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+.about .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+/* Menu Start */
+.menu h2 {
+  padding: 8rem 7% 1.4rem;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: "Bebas Neue", sans-serif;
+  color: var(--primary1);
+}
+
+.menu p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+/*Gambar Menu */
+.menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+.menu .row .menu-card {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+.row .menu-card img {
+  width: 250px;
+  height: 250px;
+  border-radius: 80%;
+}
+.menu .row .menu-card .menu-card-title {
+  margin: 1rem auto 1rem;
+}
+.menu .row .menu-card .menu-card-price {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+/* Menu End */
+
+/* Contact Start */
+.contact h2 {
+  padding: 8rem 7% 1.4rem;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: "Bebas Neue", sans-serif;
+  color: var(--primary2);
+}
+
+.contact .contact2 {
+  color: var(--primary1);
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.contact .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: var(--primary2);
+  width: 85%;
+  margin: auto;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100;
+  object-fit: cover;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+
+  text-align: center;
+}
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--primary1);
+  border: 1px solid white;
+}
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background: none;
+  color: white;
+}
+.contact .row .user {
+  margin-left: 10px;
+}
+
+.contact .row .mail {
+  margin-left: 10px;
+}
+.contact .row .phone {
+  margin-left: 10px;
+}
+.contact .row form .btn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  font-family: "Bebas Neue", sans-serif;
+  background-color: var(--primary1);
+  color: white;
+}
+.contact .row form .input-group .Nama {
+  font-family: "Bebas Neue", sans-serif;
+  color: black;
+  margin-left: 10px;
+}
+.contact .row form .input-group .Text {
+  font-family: "Bebas Neue", sans-serif;
+  color: black;
+  margin-left: 10px;
+}
+.contact .row form .input-group .Phone {
+  font-family: "Bebas Neue", sans-serif;
+  color: black;
+  margin-left: 10px;
+}
+/* Contact End */
+
+/* Footer Start */
+footer {
+  text-align: center;
+  background-color: var(--primary1);
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+footer .social {
+  padding: 1rem 0;
+}
+footer .social a {
+  color: white;
+  margin: 1rem;
+}
+
+footer .social a:hover {
+  color: var(--primary3);
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+footer .links a {
+  color: var(--bg);
+  padding: 0.7rem 1rem;
+}
+footer .links a:hover {
+  color: var(--primary3);
+}
+footer .credit {
+  font-size: 0.8rem;
+  color: var(--bg);
+}
+footer .credit a {
+  color: var(--bg);
+  font-family: "Bebas Neue", sans-serif;
+}
+
+footer .credit a:hover {
+  color: var(--primary3);
+}
+/* Footer End */
+
+/* Media Queries
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+  .navbar .navbar-logo {
+    margin-left: 25px;
+  }
+  #hamburger-menu {
+    display: inline-block;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%; /*Biar hilang keluar layar ke kanan, kalau none nanti malah ilang beneran */
+    right: -100%; /*Biar hilang keluar layar ke kanan, kalau none nanti malah ilang beneran  */
+    background-color: var(--primary2);
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.7rem;
+    font-size: 2rem;
+  }
+  .navbar .navbar-nav a:hover {
+    color: var(--primary1);
+  }
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+    border-bottom: 1px solid var(--primary1);
+  }
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+  .about .row {
+    flex-wrap: wrap;
+  }
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 15px;
+  }
+  .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+  .about .row .content p {
+    font-size: 1.2rem;
+  }
+  .menu p {
+    font-size: 1.2rem;
+  }
+
+  .contact .row {
+    flex-wrap: wrap;
+  }
+
+  .contact .row .map {
+    height: 30rem;
+  }
+  .contact .row form {
+    padding-top: 0;
+  }
+  /* Mobile Phone */
+  @media (max-width: 450px) {
+    html {
+      font-size: 55%;
+    }
+  }
+}
